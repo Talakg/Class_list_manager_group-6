@@ -19,7 +19,14 @@ def search_name(names, name):
 #Written by: Jouri Alotaibi
 def sortNames(names):
     return sorted(names, key=str.lower)
-
+    
+# Written by: Adeem Alothman
+def remove_duplicates(names):
+    unique = []
+    for name in names:
+        if name not in unique:
+            unique.append(name)
+    return unique
   
 def main():
     print("Welcome to the Class List Manager!")
@@ -28,4 +35,6 @@ def main():
     print("Number of names:", count_names(names))
     print("search for Lama:", search_name(names, "Lama"))
     print("Sorted names:", sortNames(names))
+    print("Without duplicates:", remove_duplicates(names))
+
 main()
